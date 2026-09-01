@@ -29,5 +29,3 @@ Fonte: imagem oficial calendário Corvus (lida 07/07/2026).
 ## Local
 
 Todos os eventos: São Paulo International Dragway — Itatiba/SP
-
-<!-- sync-test: 2026-09-01 19:55:23 -->
