@@ -1,0 +1,54 @@
+# ── Credenciais e segredos ────────────────────────────────────────────
+.env
+.env.local
+.env.production
+.env.*
+*.key
+*.pem
+*.p12
+youtube_credentials.json
+youtube_token.json
+
+# ── Logs ──────────────────────────────────────────────────────────────
+*.log
+logs/
+cf-stderr.log
+cf-stdout.log
+ngrok.log
+bot/decisions_*.log
+
+# ── Estado runtime (não versionado, gerado em execução) ───────────────
+bot_state/
+drive_queue.json
+carousel_hashes.json
+etapa3_copy_ids.json
+err_*.txt
+out_*.txt
+verifier/.last_sent
+
+# ── Relatórios diários e screenshots (dados operacionais) ─────────────
+reports/
+
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# ── Ambientes virtuais ────────────────────────────────────────────────
+venv*/
+.venv/
+hermes-env/
+hermes-agent/
+
+# ── Context: JSONs de diagnóstico (grandes, dinâmicos) ────────────────
+context/diag_purchase_730d.json
+context/historico_publicos.json
+
+# ── Backtest ──────────────────────────────────────────────────────────
+backtest/
+
+# ── Tiktok demo (estado local) ────────────────────────────────────────
+tiktok_demo/server*.log
+tiktok_demo/gravar_demo.ps1
