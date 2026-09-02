@@ -52,3 +52,7 @@ backtest/
 # ── Tiktok demo (estado local) ────────────────────────────────────────
 tiktok_demo/server*.log
 tiktok_demo/gravar_demo.ps1
+
+# ── Sentinela (estado runtime, não versionado) ────────────────────────
+sentinela/state.json
+sentinela/dry_run.log
