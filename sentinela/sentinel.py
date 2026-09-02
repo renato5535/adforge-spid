@@ -207,11 +207,15 @@ def run(dry_run=True):
     env = _load_env()
     state = _load_state()
 
-    # Verifica silêncio do bot
-    if _is_silenced():
-        _log("Bot silenciado. Ciclo abortado.")
+    # Em produção, silêncio aborta o ciclo inteiro (sem alertas).
+    # Em dry-run, coleta e loga normalmente — silêncio só bloqueia envio real.
+    silenced = _is_silenced()
+    if silenced and not dry_run:
+        _log("Bot silenciado. Ciclo abortado (modo produção).")
         _save_state(state)
         return
+    if silenced:
+        _log("Bot silenciado, mas dry-run ativo — coleta e loga normalmente.")
 
     # Coleta métricas
     _log("Coletando métricas da Meta API...")
